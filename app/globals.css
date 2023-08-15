@@ -1,0 +1,31 @@
+body {
+  margin: 0;
+  background: #2c2f33;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-image: url(/images/bg.png);
+}
+
+main {
+  color: white;
+  padding: 20px;
+  height: 100vh;
+  box-sizing: border-box;
+  backdrop-filter: blur(100px);
+}
+
+article {
+  min-height: 90vh;
+  box-sizing: border-box;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+  border-radius: 2px;
+  border-bottom: 2px solid #375e5e;
+}
+
+@media screen and (max-width: 500px) {
+  main {
+    padding: 0;
+  }
+}
