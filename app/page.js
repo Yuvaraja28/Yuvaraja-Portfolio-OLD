@@ -45,7 +45,7 @@ export default function Home() {
     { 
       name: 'TD Problem Solver', icon: '/projects/td.png', links: [{name: 'Website', url: 'https://td.yuvaraja28.me'}],
       description: "This Project is based on Thermodynamics. So in this Project you can calculate all kinds of Problem related to Otto, Diesel, Brayton, Dual Cycles by inputing valid datas",
-      technologies: ['Node JS', 'Next JS', 'HTML & CSS', 'Thermodynamics Formulas']
+      technologies: ['Node JS', 'Next JS', 'HTML & CSS', 'Thermodynamics Formulae']
     },
     {
       name: 'Private Chat Server', icon: null, links: [{name: 'Github', url: 'https://github.com/Yuvaraja28/Private-Chat-Server'}],
@@ -137,10 +137,12 @@ export default function Home() {
                   <div className={"projects_list_div"}>
                     {projects.map(innerProject =>
                       <div key={innerProject.name} className={["project_div"].join(' ')}>
-                        {innerProject.icon == null ? "" : <Image className={["project_icon", 'show_pc'].join(' ')} alt='project' src={innerProject.icon} width={68} height={68} />}
+                        {(innerProject?.banner == undefined) ? "" :
+                          <Image className={["project_image"].join(' ')} alt='project' src={'/images/banner.gif'} width={128} height={168} />
+                        }
                         <div className={"project_details_div"}>
                           <div className={'project_name_icon_div'}>
-                            {innerProject.icon == null ? "" : <Image className={["project_icon", 'show_mobile'].join(' ')} alt='project' src={innerProject.icon} width={38} height={38} />}
+                            {innerProject.icon == null ? "" : <Image className={["project_icon"].join(' ')} alt='project' src={innerProject.icon} width={38} height={38} />}
                             <span className={["project_name", outfit.className].join(' ')}>{innerProject.name}</span>
                           </div>
                           <span className={["project_description", lexend.className].join(' ')}>

@@ -106,7 +106,6 @@
 .profile_div {
   display: flex;
   flex-direction: column;
-  box-sizing: border-box;
   animation: PopIn 1s ease-out;
   overflow: hidden;
 
@@ -217,7 +216,6 @@
       .aboutme_social_div {
         width: 100%;
         overflow: hidden;
-        box-sizing: border-box;
         display: flex;
         align-items: center;
         flex-wrap: wrap;
@@ -270,12 +268,13 @@
         overflow: hidden;
         border-radius: 20px;
         flex-direction: column;
-        padding: 12px;
+        padding: 8px;
         border: 2.5px solid #16222A;
         background-color: transparent;
         background: linear-gradient(to right, #16222A, #1b1d2b);
         background: -webkit-linear-gradient(to right, #16222A, #1b1d2b);
         box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        width: 100%;
         gap: 14px;
 
         .projects_heading {
@@ -283,35 +282,39 @@
           margin-left: 10px;
           transition: font-size 0.2s linear, margin 0.5s linear;
         }
-        .projects_list_div {
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          justify-content: center;
-          gap: 10px;
 
+        .projects_list_div {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+          gap: 8px;
+
+          @media screen and (max-width: 550px) {
+            display: flex;
+            flex-direction: column;
+          }
+ 
           .project_div {
             display: flex;
-            align-items: center;
-            justify-content: space-between;
-            flex-direction: row;
-            box-sizing: content-box;
+            flex-direction: column;
             background-color: #232c33;
             border: 2px solid #464e4b;
             border-radius: 16px;
-            padding: 8px 14px;
             cursor: pointer;
-            width: -webkit-fill-available;
             tap-highlight-color: transparent;
             -webkit-tap-highlight-color: transparent;
             transition: background 0.2s ease-in-out, border 0.2s ease-in-out, transform 0.2s ease-in-out;
-            gap: 14px;
+            overflow: auto;
+
+            .project_image {
+              width: 100%;
+              object-fit: cover;
+            }
 
             .project_details_div {
               display: flex;
               flex-direction: column;
-              width: 100%;
-              gap: 5px;
+              padding: 10px 12px;
+              gap: 8px;
 
               .project_name_icon_div {
                 display: flex;
@@ -354,40 +357,39 @@
               @media screen and (max-width: 750px) {
                 gap: 6px;
               }
-            }
 
-            @media screen and (max-width: 750px) {
-              flex-direction: column;
-            }
-        
-
-            .project_link_div {
-              gap: 5px;
-              width: 100%;
-              display: flex;
-              flex-direction: row;
-              flex-wrap: wrap;
-
-              .project_link_icon {
-                color: white;
-                display: flex;
-                align-items: center;
-                font-size: 18px;
-                padding: 4px 6px;
-                border-radius: 8px;
-                border: 2px solid #74827e;
-                text-decoration: none;
-                background-color: #171b21;
-                transition: background 0.2s linear, border 0.2s linear;
-                gap: 5px;
-
-                .project_link_name {
-                  font-size: 16px;
-                }
+              @media screen and (max-width: 750px) {
+                flex-direction: column;
               }
 
-              .project_link_icon:hover {
-                border-color: white;
+              .project_link_div {
+                gap: 5px;
+                width: 100%;
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+
+                .project_link_icon {
+                  color: white;
+                  display: flex;
+                  align-items: center;
+                  font-size: 18px;
+                  padding: 4px 6px;
+                  border-radius: 8px;
+                  border: 2px solid #74827e;
+                  text-decoration: none;
+                  background-color: #171b21;
+                  transition: background 0.2s linear, border 0.2s linear;
+                  gap: 5px;
+
+                  .project_link_name {
+                    font-size: 16px;
+                  }
+                }
+
+                .project_link_icon:hover {
+                  border-color: white;
+                }
               }
             }
           }
