@@ -274,6 +274,140 @@
       }
     }
 
+    .education_container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding-inline: 20px;
+
+      @media screen and (max-width: 550px) {
+        padding-inline: 15px;
+      }
+
+      .education_inner {
+        display: flex;
+        overflow: hidden;
+        border-radius: 20px;
+        flex-direction: column;
+        padding: 8px;
+        border: 2.5px solid #16222A;
+        background-color: transparent;
+        background: linear-gradient(to right, #16222A, #1b1d2b);
+        background: -webkit-linear-gradient(to right, #16222A, #1b1d2b);
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        width: 100%;
+        gap: 8px;
+
+        .education_heading {
+          font-size: 32px;
+          margin-left: 10px;
+          transition: font-size 0.2s linear, margin 0.5s linear;
+        }
+
+        .education_list_div {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+          gap: 8px;
+
+          @media screen and (max-width: 550px) {
+            display: flex;
+            flex-direction: column;
+          }
+ 
+          .education_div {
+            display: flex;
+            flex-direction: row;
+            background-color: #232c33;
+            border: 2px solid #464e4b;
+            border-radius: 16px;
+            tap-highlight-color: transparent;
+            -webkit-tap-highlight-color: transparent;
+            transition: background 0.2s ease-in-out, border 0.2s ease-in-out, transform 0.2s ease-in-out;
+            overflow: auto;
+
+            .education_icon {
+              padding: 10px;
+              align-self: center;
+              object-fit: contain;
+            }
+
+            .education_details_div {
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              padding: 12px 10px;
+              padding-left: 4px;
+              gap: 8.5px;
+
+              .education_name {
+                font-size: 22px;
+                font-weight: 700;
+                margin-bottom: -2px;
+
+                @media screen and (max-width: 450px) {
+                  font-size: 18px;
+                }
+              }
+
+              .education_description_div {
+                display: flex;
+                flex-direction: column;
+                gap: 5px;
+
+                .education_description {
+                  display: flex;
+                  flex-direction: row;
+                  align-items: center;
+                  font-weight: 400;
+                  font-size: 16.5px;
+                  gap: 6px;
+  
+                  @media screen and (max-width: 450px) {
+                    font-size: 14px;
+                  }
+                }  
+              }
+
+              .education_link_div {
+                gap: 5px;
+                width: 100%;
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+
+                .education_link_icon {
+                  color: white;
+                  display: flex;
+                  align-items: center;
+                  font-size: 18px;
+                  padding: 2px 6px;
+                  border-radius: 6px;
+                  border: 1.75px solid #74827e;
+                  text-decoration: none;
+                  background-color: #171b21;
+                  transition: background 0.2s linear, border 0.2s linear;
+                  gap: 5px;
+
+                  .education_link_name {
+                    font-size: 16px;
+                  }
+                }
+
+                .education_link_icon:hover {
+                  border-color: white;
+                }
+              }
+            }
+          }
+
+          .education_div:hover {
+            background-color: #375e5e;
+            border: 2px solid white;
+          }
+        }
+      }
+    }
+
     .projects_container {
       display: flex;
       flex-direction: column;
@@ -296,7 +430,7 @@
         background: -webkit-linear-gradient(to right, #16222A, #1b1d2b);
         box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
         width: 100%;
-        gap: 14px;
+        gap: 10px;
 
         .projects_heading {
           font-size: 32px;
@@ -320,7 +454,6 @@
             background-color: #232c33;
             border: 2px solid #464e4b;
             border-radius: 16px;
-            cursor: pointer;
             tap-highlight-color: transparent;
             -webkit-tap-highlight-color: transparent;
             transition: background 0.2s ease-in-out, border 0.2s ease-in-out, transform 0.2s ease-in-out;

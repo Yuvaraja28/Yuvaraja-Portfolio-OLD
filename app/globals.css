@@ -9,6 +9,11 @@ body {
   background: #0e151a;
 }
 
+a {
+  color: white;
+  text-decoration: none;
+}
+
 body::-webkit-scrollbar{
   width: 0.40rem
 }
