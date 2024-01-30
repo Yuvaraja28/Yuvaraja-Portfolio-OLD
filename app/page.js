@@ -6,6 +6,7 @@ import { OrbitLoader } from '@/components/loader/loader'
 import { Josefin_Sans, Lexend, Righteous, Outfit } from 'next/font/google'
 import { BiLink } from 'react-icons/bi'
 import { TbBrandCashapp } from "react-icons/tb";
+import { MdMail } from 'react-icons/md'
 import { FaGithub, FaLinkedin, FaPaypal, FaDiscord, FaInstagram } from 'react-icons/fa'
 
 const lexend = Lexend({ weight: ['300', '400', '500', '600'], subsets: ['latin'] });
@@ -19,7 +20,8 @@ export default function Home() {
     {name: 'Linkedin', icon: <FaLinkedin />, link: "https://www.linkedin.com/in/yuvaraja-murali-4814bb242/", nav: true},
     {name: 'Discord', icon: <FaDiscord />, link: "https://discord.com/users/759050921413312532", nav: true},
     {name: 'Paypal', icon: <FaPaypal />, link: "https://www.paypal.com/paypalme/YuvarajaMurali", nav: false},
-    {name: 'Instagram', icon: <FaInstagram />, link: "https://www.instagram.com/yuvaraja_28/", nav: false}
+    {name: 'Instagram', icon: <FaInstagram />, link: "https://www.instagram.com/yuvaraja_28/", nav: false},
+    {name: 'Email', icon: <MdMail />, link: "mailto:yuv.the.dev@gmail.com", nav: false}
   ]
   const projects = [
     { 
@@ -81,23 +83,32 @@ export default function Home() {
         </div>
       :
         <>
-          <div className={"navbar"}>
+          <nav className={"navbar"}>
             <div className={["navbar_text_div"].join(' ')}>
               <Image alt='Yuvaraja' className={["navbar_icon"].join(' ')} src={'/images/yuvaraja.png'} width={40} height={40} />
               <div className={"navbar_text"}>
-                <span className={["navbar_text_name", righteous.className].join(' ')}>Yuvaraja</span>
-                <span className={["navbar_text_role", lexend.className].join(' ')}>FullStack Developer</span>
+                <span className={["navbar_text_name", righteous.className].join(' ')}>
+                  Yuvaraja
+                </span>
+                <span className={["navbar_text_role", lexend.className].join(' ')}>
+                  FullStack Developer
+                </span>
               </div>
             </div>
             <div className={["profile_social_div"].join(' ')}>
               {button_links.map(button => button.nav ? <a key={button.name} className={"profile_social_button"} target='_blank' href={button.link}>{button.icon}</a> : null)}
             </div>
-          </div>
+          </nav>
           <div className={"profile_div"}>
             <div className={"articles_div"}>
               <article className={["profile_bg"].join(' ')}>
                 <div className={["profile_container"].join(' ')}>
-                  <span className={["profile_name", "green_glow", josefin_sans.className].join(' ')}>Yuvaraja</span>
+                  <span className={["profile_name", "green_glow", josefin_sans.className].join(' ')}>
+                    Yuvaraja
+                  </span>
+                  <span className={["profile_bottom_details", "green_glow", lexend.className].join(' ')}>
+                    FullStack Developer • Cloud Computing Specialist • Open-Source Enthusiast • Security analyst 
+                  </span>
                 </div>
               </article>
               <article className={["aboutme_container"].join(' ')}>
@@ -168,6 +179,9 @@ export default function Home() {
                 </div>
               </article>
             </div>
+            <footer className={outfit.className}>
+              © {new Date().getFullYear()} • Made with 💗 by Yuvaraja
+            </footer>
           </div>
         </>
       }

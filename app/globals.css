@@ -19,3 +19,12 @@ body::-webkit-scrollbar-thumb {
   border-radius: 2px;
   background: rgb(97 117 117);
 }
+
+footer {
+  font-size: 16.5px;
+  padding-top: 6px;
+  padding-bottom: 8px;
+  text-align: center;
+  background: #252c32;
+  border-radius: 12px 12px 0 0;
+}
