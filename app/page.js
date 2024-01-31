@@ -87,7 +87,7 @@ export default function Home() {
   const education = [
     {
       name: 'Manakula Vinayagar Institute of Technology',
-      duration: '2023 - 2026',
+      duration: '2022 - 2026',
       course: 'B.Tech CSE',
       icon: '/education/mvit.png',
       location: {name: 'Pondicherry', url: 'https://maps.app.goo.gl/ZS4MJpvT71uLxPb47'},
