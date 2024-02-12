@@ -1,13 +1,13 @@
 'use client';
-import './styles.css'
 import Link from 'next/link';
 import Image from 'next/image'
+import styles from './page.module.css'
 import { useState, useEffect } from 'react'
 import { OrbitLoader } from '@/components/loader/loader'
 import { Josefin_Sans, Lexend, Righteous, Outfit } from 'next/font/google'
 import { BiLink } from 'react-icons/bi'
 import { TbBrandCashapp } from "react-icons/tb";
-import { MdMail, MdOutlineSchool, MdLocationOn } from 'react-icons/md'
+import { MdMail } from 'react-icons/md'
 import { FaGithub, FaLinkedin, FaPaypal, FaDiscord, FaInstagram } from 'react-icons/fa'
 
 const lexend = Lexend({ weight: ['300', '400', '500', '600'], subsets: ['latin'] });
@@ -87,23 +87,24 @@ export default function Home() {
   const education = [
     {
       name: 'Manakula Vinayagar Institute of Technology',
-      duration: '2022 - 2026',
-      course: 'B.Tech CSE',
-      icon: '/education/mvit.png',
-      location: {name: 'Pondicherry', url: 'https://maps.app.goo.gl/ZS4MJpvT71uLxPb47'},
-      size_width: 96,
-      size_height: 128,
-      links: [{name: 'Website', url: 'https://mvit.edu.in/'}]
+      duration: '2022 - Present',
+      course: 'Undergraduate (B.Tech in CSE)',
+      mark: 'CGPA - 7.71',
+      location: 'Pondicherry',
     },
     {
       name: 'Petit Seminair Higher Seconday School',
-      duration: '2008 - 2022',
-      course: 'TN State Board',
-      icon: '/education/petit.png',
-      location: {name: 'Pondicherry', url: 'https://maps.app.goo.gl/Fbmdo8hCCcq7BnNbA'},
-      size_width: 96,
-      size_height: 128,
-      links: [{name: 'Website', url: 'https://petitseminaire.org.in/'}]
+      duration: '2020 - 2022',
+      course: 'Higher Secondary School (TN State Board)',
+      mark: 'Percentage - 84%',
+      location: 'Pondicherry',
+    },
+    {
+      name: 'Petit Seminair Higher Seconday School',
+      duration: '2008 - 2020',
+      course: 'Secondary School (TN State Board)',
+      mark: 'Percentage - 74.4%',
+      location: 'Pondicherry',
     },
   ]
   const [isLoading, setLoading] = useState(true);
@@ -114,128 +115,124 @@ export default function Home() {
   return (
     <main>
       {isLoading ?
-        <div className={["centre_div"].join(' ')}>
+        <div className={styles.centre_div}>
           <OrbitLoader />
         </div>
       :
         <>
-          <nav className={"navbar"}>
-            <div className={["navbar_text_div"].join(' ')}>
-              <Image alt='Yuvaraja' className={["navbar_icon"].join(' ')} src={'/images/yuvaraja.png'} width={40} height={40} />
-              <div className={"navbar_text"}>
-                <span className={["navbar_text_name", righteous.className].join(' ')}>
+          <nav className={styles.navbar}>
+            <div className={styles.navbar_text_div}>
+              <Image alt='Yuvaraja' className={styles.navbar_icon} src={'/images/yuvaraja.png'} width={40} height={40} />
+              <div className={styles.navbar_text}>
+                <span className={[styles.navbar_text_name, righteous.className].join(' ')}>
                   Yuvaraja
                 </span>
-                <span className={["navbar_text_role", lexend.className].join(' ')}>
+                <span className={[styles.navbar_text_role, lexend.className].join(' ')}>
                   FullStack Developer
                 </span>
               </div>
             </div>
-            <div className={["profile_social_div"].join(' ')}>
-              {button_links.map(button => button.nav ? <Link key={button.name} className={"profile_social_button"} target='_blank' href={button.link}>{button.icon}</Link> : null)}
+            <div className={styles.profile_social_div}>
+              {button_links.map(button => button.nav ? <Link key={button.name} className={styles.profile_social_button} target='_blank' href={button.link}>{button.icon}</Link> : null)}
             </div>
           </nav>
-          <div className={"profile_div"}>
-            <div className={"articles_div"}>
-              <article className={["profile_bg"].join(' ')}>
-                <div className={["profile_container"].join(' ')}>
-                  <span className={["profile_name", "green_glow", josefin_sans.className].join(' ')}>
+          <div className={styles.profile_div}>
+            <div className={styles.articles_div}>
+              <article className={styles.profile_bg}>
+                <div className={styles.profile_container}>
+                  <span className={[styles.profile_name, styles.green_glow, josefin_sans.className].join(' ')}>
                     Yuvaraja
                   </span>
-                  <span className={["profile_bottom_details", "green_glow", lexend.className].join(' ')}>
+                  <span className={[styles.profile_bottom_details, styles.green_glow, lexend.className].join(' ')}>
                     FullStack Developer • Cloud Computing Specialist • Open-Source Enthusiast • Security analyst 
                   </span>
                 </div>
               </article>
-              <article className={["aboutme_container"].join(' ')}>
-                <div className={["aboutme_inner"].join(' ')}>
-                  <Image className={'aboutme_banner'} width={520} height={285} src={"/images/banner.gif"} />
-                  <div className={"aboutme_inner_column"}>
-                    <span className={["aboutme_heading", "green_glow", righteous.className].join(' ')}>
+              <article className={styles.aboutme_container}>
+                <div className={styles.aboutme_inner}>
+                  <Image className={styles.aboutme_banner} width={420} height={285} src={"/images/banner.gif"} />
+                  <div className={styles.aboutme_inner_column}>
+                    <span className={[styles.aboutme_heading, styles.green_glow, righteous.className].join(' ')}>
                       About me
                     </span>
-                    <div className={'aboutme_text_div'}>
-                      <span className={["aboutme_text", lexend.className].join(' ')}>
+                    <div className={styles.aboutme_text_div}>
+                      <span className={[styles.aboutme_text, lexend.className].join(' ')}>
                         Hey there! I'm <b>Yuvaraja</b>, a developer who enjoys coding in Python, Node.js, and C/C++. I also work in web development with HTML, CSS, and Next.js. When it comes to databases, I'm familiar with MongoDB, Redis, and MySQL.
                       </span>
-                      <span className={["aboutme_text", lexend.className].join(' ')}>
+                      <span className={[styles.aboutme_text, lexend.className].join(' ')}>
                         Aside from coding, I have a keen interest in computer networks and Linux. I like to make systems secure and efficient, and I'm always up for a good problem-solving challenge. Additionally, I have experience in cloud computing, which adds flexibility and scalability to my projects.
                       </span>
-                      <span className={["aboutme_text", lexend.className].join(' ')}>
+                      <span className={[styles.aboutme_text, lexend.className].join(' ')}>
                         In my free time, I'm learning about machine learning to broaden my skill set and keep up with the latest tech trends. Looking forward to connecting and sharing knowledge with fellow enthusiasts!
                       </span>
                     </div>
-                    <div className={["aboutme_social_div"].join(' ')}>
+                    <div className={[styles.aboutme_social_div].join(' ')}>
                       {button_links.map(button => 
-                        <Link key={button.name} className={["aboutme_social_button", lexend.className].join(' ')} target='_blank' href={button.link}>
-                          <span className={"button button_icon"}>{button.icon}</span>
-                          <span className={"button"}>{button.name}</span>
+                        <Link key={button.name} className={[styles.aboutme_social_button, lexend.className].join(' ')} target='_blank' href={button.link}>
+                          <span className={[styles.button, styles.button_icon].join(' ')}>{button.icon}</span>
+                          <span className={styles.button}>{button.name}</span>
                         </Link>
                       )}
                     </div>
                   </div>
                 </div>
               </article>
-              <article className={["education_container"].join(' ')}>
-                <div className={'education_inner'}>
-                  <span class={["education_heading", "green_glow", righteous.className].join(' ')}>
+              <article className={[styles.education_container].join(' ')}>
+                <div className={styles.education_inner}>
+                  <span class={[styles.education_heading, styles.green_glow, righteous.className].join(' ')}>
                     Education
                   </span>
-                  <div className={"education_list_div"}>
-                    {education.map(innerEducation =>
-                      <div key={innerEducation.name} className={["education_div"].join(' ')}>
-                        {innerEducation.icon == null ? "" : <Image className={["education_icon"].join(' ')} alt='project' src={innerEducation.icon} width={innerEducation.size_width} height={innerEducation.size_height} />}
-                        <div className={"education_details_div"}>
-                          <span className={["education_name", outfit.className].join(' ')}>{innerEducation.name}</span>
-                          <div className={"education_description_div"}>
-                            <span className={["education_description", lexend.className].join(' ')}>
-                              <MdOutlineSchool fontSize={20} /> {innerEducation.course} ({innerEducation.duration})
+                  <div className={styles.education_list_div_timeline}>
+                    <div className={styles.education_list_div}>
+                      {education.map(innerEducation =>
+                        <div className={[styles.education_div_main, outfit.className].join(' ')}>
+                          <span className={styles.education_timeline}>
+                            {innerEducation.duration}
+                          </span>
+                          <div key={innerEducation.name} className={[styles.education_div].join(' ')}>
+                            <span className={[styles.education_name, outfit.className].join(' ')}>
+                              {innerEducation.course} 
                             </span>
-                            <Link target='_blank' href={innerEducation.location.url} className={["education_description", lexend.className].join(' ')}>
-                              <MdLocationOn fontSize={20} /> {innerEducation.location.name}
-                            </Link>
+                            <div className={styles.education_description_div}>
+                              <span style={{ opacity: 0.8 }} className={[styles.education_description, lexend.className].join(' ')}>
+                                {innerEducation.name} - {innerEducation.location}
+                              </span>
+                              <span className={[styles.education_description, lexend.className].join(' ')}>
+                                {innerEducation.mark}
+                              </span>
+                            </div>
                           </div>
-                          <div className={"education_link_div"}>
-                            {innerEducation.links.map(link =>
-                              <Link className={"education_link_icon"} target='_blank' href={link.url}>
-                                <BiLink />
-                                <span className={['education_link_name', outfit.className].join(' ')}>
-                                  {link.name}
-                                </span>
-                              </Link>
-                            )}
-                          </div>
-                        </div>                      
-                      </div>
-                    )}
+                        </div>
+                      )}
+                    </div>
                   </div>
                 </div>
               </article>
-              <article className={["projects_container"].join(' ')}>
-                <div className={'projects_inner'}>
-                  <span class={["projects_heading", "green_glow", righteous.className].join(' ')}>
+              <article className={styles.projects_container}>
+                <div className={styles.projects_inner}>
+                  <span class={[styles.projects_heading, styles.green_glow, righteous.className].join(' ')}>
                     Projects
                   </span>
-                  <div className={"projects_list_div"}>
+                  <div className={styles.projects_list_div}>
                     {projects.map(innerProject =>
-                      <div key={innerProject.name} className={["project_div"].join(' ')}>
+                      <div key={innerProject.name} className={styles.project_div}>
                         {(innerProject?.banner == undefined) ? "" :
-                          <Image className={["project_image"].join(' ')} alt='project' src={'/images/banner.gif'} width={128} height={168} />
+                          <Image className={styles.project_image} alt='project' src={'/images/banner.gif'} width={128} height={168} />
                         }
-                        <div className={"project_details_div"}>
-                          <div className={'project_name_icon_div'}>
-                            {innerProject.icon == null ? "" : <Image className={["project_icon"].join(' ')} alt='project' src={innerProject.icon} width={38} height={38} />}
-                            <span className={["project_name", outfit.className].join(' ')}>{innerProject.name}</span>
+                        <div className={styles.project_details_div}>
+                          <div className={styles.project_name_icon_div}>
+                            {innerProject.icon == null ? "" : <Image className={styles.project_icon} alt='project' src={innerProject.icon} width={38} height={38} />}
+                            <span className={[styles.project_name, outfit.className].join(' ')}>{innerProject.name}</span>
                           </div>
-                          <span className={["project_description", lexend.className].join(' ')}>
+                          <span className={[styles.project_description, lexend.className].join(' ')}>
                             {innerProject.description}
                           </span>
-                          <span className={["project_technologies", outfit.className].join(' ')}>
+                          <span className={[styles.project_technologies, outfit.className].join(' ')}>
                             {innerProject.technologies.join(', ')}
                           </span>
-                          <div className={"project_link_div"}>
+                          <div className={styles.project_link_div}>
                             {innerProject.links.map(link =>
-                              <Link className={"project_link_icon"} target='_blank' href={link.url}>
+                              <Link className={styles.project_link_icon} target='_blank' href={link.url}>
                                 {link.url.startsWith("https://github.com") ? <FaGithub /> : (link.url.startsWith("https://pterodactylmarket") || link.url.startsWith("https://builtbybit")) ? <TbBrandCashapp />  : <BiLink />}
                                 <span className={['project_link_name', outfit.className].join(' ')}>
                                   {link.name}
