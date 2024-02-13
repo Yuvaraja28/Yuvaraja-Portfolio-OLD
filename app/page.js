@@ -51,7 +51,7 @@ export default function Home() {
     },
     { 
       name: 'TD Problem Solver', icon: '/projects/td.png',
-      links: [{name: 'Website', url: 'https://td.yuvaraja28.me'}],
+      links: [{name: 'Website', url: 'https://td.yuvaraja.tech'}],
       description: "This Project is based on Thermodynamics. So in this Project you can calculate all kinds of Problem related to Otto, Diesel, Brayton, Dual Cycles by inputing valid datas",
       technologies: ['Node JS', 'Next JS', 'HTML & CSS', 'Thermodynamics Formulae']
     },
