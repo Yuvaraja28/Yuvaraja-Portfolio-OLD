@@ -120,136 +120,142 @@ export default function Home() {
         </div>
       :
         <>
-          <nav className={styles.navbar}>
-            <div className={styles.navbar_text_div}>
-              <Image alt='Yuvaraja' className={styles.navbar_icon} src={'/images/yuvaraja.png'} width={40} height={40} />
-              <div className={styles.navbar_text}>
-                <span className={[styles.navbar_text_name, righteous.className].join(' ')}>
-                  Yuvaraja
-                </span>
-                <span className={[styles.navbar_text_role, lexend.className].join(' ')}>
-                  FullStack Developer
-                </span>
-              </div>
-            </div>
-            <div className={styles.profile_social_div}>
-              {button_links.map(button => button.nav ? <Link key={button.name} className={styles.profile_social_button} target='_blank' href={button.link}>{button.icon}</Link> : null)}
-            </div>
-          </nav>
           <div className={styles.profile_div}>
             <div className={styles.articles_div}>
               <article className={styles.profile_bg}>
-                <div className={styles.profile_container}>
-                  <span className={[styles.profile_name, styles.green_glow, josefin_sans.className].join(' ')}>
-                    Yuvaraja
-                  </span>
-                  <span className={[styles.profile_bottom_details, styles.green_glow, lexend.className].join(' ')}>
-                    FullStack Developer • Cloud Computing Specialist • Open-Source Enthusiast • Security analyst 
-                  </span>
-                </div>
-              </article>
-              <article className={styles.aboutme_container}>
-                <div className={styles.aboutme_inner}>
-                  <Image className={styles.aboutme_banner} width={420} height={285} src={"/images/banner.gif"} />
-                  <div className={styles.aboutme_inner_column}>
-                    <span className={[styles.aboutme_heading, styles.green_glow, righteous.className].join(' ')}>
-                      About me
+                <nav className={styles.navbar}>
+                  <div className={styles.navbar_text_div}>
+                    <Image alt='Yuvaraja' className={styles.navbar_icon} src={'/images/yuvaraja.png'} width={40} height={40} />
+                    <div className={styles.navbar_text}>
+                      <span className={[styles.navbar_text_name, righteous.className].join(' ')}>
+                        Yuvaraja
+                      </span>
+                      <span className={[styles.navbar_text_role, lexend.className].join(' ')}>
+                        FullStack Developer
+                      </span>
+                    </div>
+                  </div>
+                  <div className={styles.profile_social_div}>
+                    {button_links.map(button => button.nav ? <Link key={button.name} className={styles.profile_social_button} target='_blank' href={button.link}>{button.icon}</Link> : null)}
+                  </div>
+                </nav>
+                <div className={styles.profile_paralax}>
+                  <img className={styles.paralax_img_fore} src={`/images/par-fg.png`} />
+                  <img className={styles.paralax_img_back} src={`/images/par-bg.png`} />
+                  <div className={styles.profile_container}>
+                    <span className={[styles.profile_name, styles.green_glow, josefin_sans.className].join(' ')}>
+                      Yuvaraja
                     </span>
-                    <div className={styles.aboutme_text_div}>
-                      <span className={[styles.aboutme_text, lexend.className].join(' ')}>
-                        Hey there! I'm <b>Yuvaraja</b>, a developer who enjoys coding in Python, Node.js, and C/C++. I also work in web development with HTML, CSS, and Next.js. When it comes to databases, I'm familiar with MongoDB, Redis, and MySQL.
-                      </span>
-                      <span className={[styles.aboutme_text, lexend.className].join(' ')}>
-                        Aside from coding, I have a keen interest in computer networks and Linux. I like to make systems secure and efficient, and I'm always up for a good problem-solving challenge. Additionally, I have experience in cloud computing, which adds flexibility and scalability to my projects.
-                      </span>
-                      <span className={[styles.aboutme_text, lexend.className].join(' ')}>
-                        In my free time, I'm learning about machine learning to broaden my skill set and keep up with the latest tech trends. Looking forward to connecting and sharing knowledge with fellow enthusiasts!
-                      </span>
-                    </div>
-                    <div className={[styles.aboutme_social_div].join(' ')}>
-                      {button_links.map(button => 
-                        <Link key={button.name} className={[styles.aboutme_social_button, lexend.className].join(' ')} target='_blank' href={button.link}>
-                          <span className={[styles.button, styles.button_icon].join(' ')}>{button.icon}</span>
-                          <span className={styles.button}>{button.name}</span>
-                        </Link>
-                      )}
-                    </div>
+                    <span className={[styles.profile_bottom_details, styles.green_glow, lexend.className].join(' ')}>
+                      FullStack Developer • Cloud Computing Specialist • Open-Source Enthusiast • Security analyst 
+                    </span>
                   </div>
                 </div>
-              </article>
-              <article className={[styles.education_container].join(' ')}>
-                <div className={styles.education_inner}>
-                  <span class={[styles.education_heading, styles.green_glow, righteous.className].join(' ')}>
-                    Education
-                  </span>
-                  <div className={styles.education_list_div_timeline}>
-                    <div className={styles.education_list_div}>
-                      {education.map(innerEducation =>
-                        <div className={[styles.education_div_main, outfit.className].join(' ')}>
-                          <span className={styles.education_timeline}>
-                            {innerEducation.duration}
+                <div className={styles.parallax_contents}>
+                  <article className={styles.aboutme_container}>
+                    <div className={styles.aboutme_inner}>
+                      <Image className={styles.aboutme_banner} width={420} height={285} src={"/images/banner.gif"} />
+                      <div className={styles.aboutme_inner_column}>
+                        <span className={[styles.aboutme_heading, styles.green_glow, righteous.className].join(' ')}>
+                          About me
+                        </span>
+                        <div className={styles.aboutme_text_div}>
+                          <span className={[styles.aboutme_text, lexend.className].join(' ')}>
+                            Hey there! I'm <b>Yuvaraja</b>, a developer who enjoys coding in Python, Node.js, and C/C++. I also work in web development with HTML, CSS, and Next.js. When it comes to databases, I'm familiar with MongoDB, Redis, and MySQL.
                           </span>
-                          <div key={innerEducation.name} className={[styles.education_div].join(' ')}>
-                            <span className={[styles.education_name, outfit.className].join(' ')}>
-                              {innerEducation.course} 
-                            </span>
-                            <div className={styles.education_description_div}>
-                              <span style={{ opacity: 0.8 }} className={[styles.education_description, lexend.className].join(' ')}>
-                                {innerEducation.name} - {innerEducation.location}
-                              </span>
-                              <span className={[styles.education_description, lexend.className].join(' ')}>
-                                {innerEducation.mark}
-                              </span>
-                            </div>
-                          </div>
+                          <span className={[styles.aboutme_text, lexend.className].join(' ')}>
+                            Aside from coding, I have a keen interest in computer networks and Linux. I like to make systems secure and efficient, and I'm always up for a good problem-solving challenge. Additionally, I have experience in cloud computing, which adds flexibility and scalability to my projects.
+                          </span>
+                          <span className={[styles.aboutme_text, lexend.className].join(' ')}>
+                            In my free time, I'm learning about machine learning to broaden my skill set and keep up with the latest tech trends. Looking forward to connecting and sharing knowledge with fellow enthusiasts!
+                          </span>
                         </div>
-                      )}
-                    </div>
-                  </div>
-                </div>
-              </article>
-              <article className={styles.projects_container}>
-                <div className={styles.projects_inner}>
-                  <span class={[styles.projects_heading, styles.green_glow, righteous.className].join(' ')}>
-                    Projects
-                  </span>
-                  <div className={styles.projects_list_div}>
-                    {projects.map(innerProject =>
-                      <div key={innerProject.name} className={styles.project_div}>
-                        {(innerProject?.banner == undefined) ? "" :
-                          <Image className={styles.project_image} alt='project' src={'/images/banner.gif'} width={128} height={168} />
-                        }
-                        <div className={styles.project_details_div}>
-                          <div className={styles.project_name_icon_div}>
-                            {innerProject.icon == null ? "" : <Image className={styles.project_icon} alt='project' src={innerProject.icon} width={38} height={38} />}
-                            <span className={[styles.project_name, outfit.className].join(' ')}>{innerProject.name}</span>
-                          </div>
-                          <span className={[styles.project_description, lexend.className].join(' ')}>
-                            {innerProject.description}
-                          </span>
-                          <span className={[styles.project_technologies, outfit.className].join(' ')}>
-                            {innerProject.technologies.join(', ')}
-                          </span>
-                          <div className={styles.project_link_div}>
-                            {innerProject.links.map(link =>
-                              <Link className={styles.project_link_icon} target='_blank' href={link.url}>
-                                {link.url.startsWith("https://github.com") ? <FaGithub /> : (link.url.startsWith("https://pterodactylmarket") || link.url.startsWith("https://builtbybit")) ? <TbBrandCashapp />  : <BiLink />}
-                                <span className={['project_link_name', outfit.className].join(' ')}>
-                                  {link.name}
-                                </span>
-                              </Link>
-                            )}
-                          </div>
-                        </div>                      
+                        <div className={[styles.aboutme_social_div].join(' ')}>
+                          {button_links.map(button => 
+                            <Link key={button.name} className={[styles.aboutme_social_button, lexend.className].join(' ')} target='_blank' href={button.link}>
+                              <span className={[styles.button, styles.button_icon].join(' ')}>{button.icon}</span>
+                              <span className={styles.button}>{button.name}</span>
+                            </Link>
+                          )}
+                        </div>
                       </div>
-                    )}
-                  </div>
+                    </div>
+                  </article>
+                  <article className={[styles.education_container].join(' ')}>
+                    <div className={styles.education_inner}>
+                      <span class={[styles.education_heading, styles.green_glow, righteous.className].join(' ')}>
+                        Education
+                      </span>
+                      <div className={styles.education_list_div_timeline}>
+                        <div className={styles.education_list_div}>
+                          {education.map(innerEducation =>
+                            <div className={[styles.education_div_main, outfit.className].join(' ')}>
+                              <span className={styles.education_timeline}>
+                                {innerEducation.duration}
+                              </span>
+                              <div key={innerEducation.name} className={[styles.education_div].join(' ')}>
+                                <span className={[styles.education_name, outfit.className].join(' ')}>
+                                  {innerEducation.course} 
+                                </span>
+                                <div className={styles.education_description_div}>
+                                  <span style={{ opacity: 0.8 }} className={[styles.education_description, lexend.className].join(' ')}>
+                                    {innerEducation.name} - {innerEducation.location}
+                                  </span>
+                                  <span className={[styles.education_description, lexend.className].join(' ')}>
+                                    {innerEducation.mark}
+                                  </span>
+                                </div>
+                              </div>
+                            </div>
+                          )}
+                        </div>
+                      </div>
+                    </div>
+                  </article>
+                  <article className={styles.projects_container}>
+                    <div className={styles.projects_inner}>
+                      <span class={[styles.projects_heading, styles.green_glow, righteous.className].join(' ')}>
+                        Projects
+                      </span>
+                      <div className={styles.projects_list_div}>
+                        {projects.map(innerProject =>
+                          <div key={innerProject.name} className={styles.project_div}>
+                            {(innerProject?.banner == undefined) ? "" :
+                              <Image className={styles.project_image} alt='project' src={'/images/banner.gif'} width={128} height={168} />
+                            }
+                            <div className={styles.project_details_div}>
+                              <div className={styles.project_name_icon_div}>
+                                {innerProject.icon == null ? "" : <Image className={styles.project_icon} alt='project' src={innerProject.icon} width={38} height={38} />}
+                                <span className={[styles.project_name, outfit.className].join(' ')}>{innerProject.name}</span>
+                              </div>
+                              <span className={[styles.project_description, lexend.className].join(' ')}>
+                                {innerProject.description}
+                              </span>
+                              <span className={[styles.project_technologies, outfit.className].join(' ')}>
+                                {innerProject.technologies.join(', ')}
+                              </span>
+                              <div className={styles.project_link_div}>
+                                {innerProject.links.map(link =>
+                                  <Link className={styles.project_link_icon} target='_blank' href={link.url}>
+                                    {link.url.startsWith("https://github.com") ? <FaGithub /> : (link.url.startsWith("https://pterodactylmarket") || link.url.startsWith("https://builtbybit")) ? <TbBrandCashapp />  : <BiLink />}
+                                    <span className={['project_link_name', outfit.className].join(' ')}>
+                                      {link.name}
+                                    </span>
+                                  </Link>
+                                )}
+                              </div>
+                            </div>                      
+                          </div>
+                        )}
+                      </div>
+                    </div>
+                  </article>
                 </div>
+                <footer className={outfit.className}>
+                  © {new Date().getFullYear()} • Made with 💗 by Yuvaraja
+                </footer>
               </article>
             </div>
-            <footer className={outfit.className}>
-              © {new Date().getFullYear()} • Made with 💗 by Yuvaraja
-            </footer>
           </div>
         </>
       }

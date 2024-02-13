@@ -8,9 +8,9 @@
 .navbar {
   top: 12px;
   z-index: 2;
-  position: sticky;
+  position: relative;
   display: flex;
-  margin: -28px 10px;
+  margin: 0 10px;
   padding: 2px 8px;
   border-radius: 12px;
   align-items: center;
@@ -132,7 +132,6 @@
   overflow-x: hidden;
   background: #0e151a;
   box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
-  padding-bottom: 20px;
   gap: 15px;
 
   @media screen and (max-width: 500px) {
@@ -141,9 +140,9 @@
 }
 
 .profile_name {
+  margin-top: -0.5em;
   font-size: 10rem;
   letter-spacing: -8px;
-  margin-top: -10rem;
   transition: font-size 0.6s linear, margin 0.5s linear;
 
   @media screen and (max-width: 800px) {
@@ -180,20 +179,43 @@
   overflow-y: auto;
   overflow-x: hidden;
   perspective: 10px;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  background-image: url(/images/bg.png);
+}
+
+.profile_paralax {
+  height: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform-style: preserve-3d;
+  z-index: -1;
+}
+
+.paralax_img_fore {
+  transform: translateZ(-5px) scale(1.5) translateY(-4px);
+}
+
+.paralax_img_back {
+  transform: translateZ(-25px) scale(3.5) translateX(-2px);
+}
+
+.paralax_img_fore, .paralax_img_back {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  z-index: -1;
+  margin-top: -100px;
 }
 
 .profile_container {
-  height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  transform-style: preserve-3d;
-  gap: 10px;
+  width: 100%;
+  margin-top: -30rem;
+  transform: translateZ(-20px) scale(3);
 }
 
 .aboutme_banner {
@@ -598,6 +620,13 @@
   }
 }
 
+.parallax_contents {
+  display: flex;
+  flex-direction: column;
+  background: #0e151a;
+  padding-block: 15px;
+  gap: 15px;
+}
 
 .show_pc {
   display: inherit;

@@ -8,6 +8,7 @@ body {
   user-select: none;
   background: #0e151a;
   scroll-behavior: smooth;
+  overflow: none;
 }
 
 a {
@@ -15,13 +16,13 @@ a {
   text-decoration: none;
 }
 
-body::-webkit-scrollbar{
+*::-webkit-scrollbar{
   width: 0.40rem
 }
-body::-webkit-scrollbar-track {
+*::-webkit-scrollbar-track {
   background: transparent
 }
-body::-webkit-scrollbar-thumb {
+*::-webkit-scrollbar-thumb {
   border-radius: 2px;
   background: rgb(97 117 117);
 }
