@@ -192,6 +192,7 @@
 }
 
 .paralax_img_fore {
+  filter: brightness(0.9);
   transform: translateZ(-5px) scale(1.5) translateY(-4px);
 }
 
