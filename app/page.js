@@ -140,8 +140,8 @@ export default function Home() {
                   </div>
                 </nav>
                 <div className={styles.profile_paralax}>
-                  <img className={styles.paralax_img_fore} src={`/images/par-fg.png`} />
-                  <img className={styles.paralax_img_back} src={`/images/par-bg.png`} />
+                  <Image className={styles.paralax_img_fore} src={`/images/par-fg.png`} width={1920} height={1080} />
+                  <Image className={styles.paralax_img_back} src={`/images/par-bg.png`} width={1920} height={1080} />
                   <div className={styles.profile_container}>
                     <span className={[styles.profile_name, styles.green_glow, josefin_sans.className].join(' ')}>
                       Yuvaraja
