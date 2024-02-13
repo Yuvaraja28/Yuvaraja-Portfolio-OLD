@@ -8,7 +8,7 @@ body {
   user-select: none;
   background: #0e151a;
   scroll-behavior: smooth;
-  overflow: none;
+  overflow: hidden;
 }
 
 a {
