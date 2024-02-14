@@ -18,6 +18,10 @@
   background-color: rgb(97 117 117);
   box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
   animation: DragBottom 650ms ease-out;
+
+  @media screen and (max-height: 350px) {
+    visibility: hidden;
+  }
 }
 
 .navbar_text_div {
