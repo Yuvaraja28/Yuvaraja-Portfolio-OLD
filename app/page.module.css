@@ -71,6 +71,7 @@
   border-radius: 50%;
   border: 2px solid transparent;
   transition: border 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  pointer-events: none;
 }
 
 .navbar_icon:hover {
@@ -205,6 +206,7 @@
   object-fit: cover;
   z-index: -1;
   margin-top: -100px;
+  pointer-events: none;
 }
 
 .profile_container {
@@ -220,6 +222,8 @@
 .aboutme_banner {
   object-fit: cover;
   border-radius: 10px;
+  pointer-events: none;
+
 
   @media screen and (max-width: 1050px) {
     width: 100%;
@@ -539,6 +543,7 @@
 .project_image {
   width: 100%;
   object-fit: cover;
+  pointer-events: none;
 }
 
 
@@ -641,10 +646,6 @@
   @media screen and (max-width: 750px) {
     display: inherit;
   }
-}
-
-.hidden {
-  display: none;
 }
 
 .green_glow {
