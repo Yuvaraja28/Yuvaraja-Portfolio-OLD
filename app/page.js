@@ -27,61 +27,70 @@ export default function Home() {
   const projects = [
     { 
       name: 'Devactyl Bot', icon: '/projects/devactyl.png',
-      links: [{name: 'Ptero Market', url: 'https://pterodactylmarket.com/resource/619'}, {name: 'BuiltbyBit', url: 'https://builtbybit.com/resources/devactyl-bot.29488/'}],
+      links: [{name: 'BuiltbyBit', url: 'https://builtbybit.com/resources/devactyl-bot.29488/'}, {name: 'SourceXchange', url: 'https://www.sourcexchange.net/products/devactyl-bot'}, {name: 'Ptero Market', url: 'https://pterodactylmarket.com/resource/619'}],
       description: "This is my commercial Project, Devactyl Bot lets you control all your Pterodactyl Panel Servers right from Discord in a Beautiful UI, Pterodactyl is a Cloud Server Management Software",
-      technologies: ['Python', 'Cryptography', 'HTTP API\'s', 'Websockets', 'Discord']
+      technologies: ['Python', 'Cryptography', 'HTTP API\'s', 'Websockets', 'Discord'],
+      banner: ['main.png', 'main2.png'].map(str => `/project_banner/devactyl/${str}`)
     },
     {
       name: 'MineCore Bot', icon: '/projects/minecore.png',
       links: [{name: 'BuiltbyBit', 'url': 'https://builtbybit.com/resources/minecore-bot.29877'}],
       description: "This is my commercial Project, MineCore Bot lets users to setup Minecraft Servers and ping it and get server and player details to Discord.",
-      technologies: ['Python', 'Cryptography', 'HTTP API\'s', 'Image Processing', 'Discord']
+      technologies: ['Python', 'Cryptography', 'HTTP API\'s', 'Image Processing', 'Discord'],
+      banner: ['main.png', 'main2.png', 'main3.png', 'main4.png'].map(str => `/project_banner/minecore/${str}`)
     },
     { 
       name: 'Frix Cloud', icon: '/projects/frix_cloud.png',
       links: [{name: 'Github', url: 'https://github.com/Yuvaraja28/FrixCloud_Hack-SRM-4.0'}],
       description: "This Project is Based on Cloud Computing which enables users to control their Local PC or server from Mobiles or other PC through a clean Dashboard",
-      technologies: ['Python', 'Node JS', 'Next JS', 'HTML & CSS', 'Cryptography', 'HTTP API\'s', 'Websockets', 'Cloud Computing', 'Networking']
+      technologies: ['Python', 'Node JS', 'Next JS', 'HTML & CSS', 'Cryptography', 'HTTP API\'s', 'Websockets', 'Cloud Computing', 'Networking'],
+      banner: ['main.png', 'main2.png'].map(str => `/project_banner/frix_cloud/${str}`)
     },
     { 
       name: 'Block Chat', icon: '/projects/block_chat.png',
       links: [{name: 'Github', url: 'https://github.com/Yuvaraja28/BlockChat_Tech_Triumph_1.0'}],
       description: "This is Chat WebApp Project based on blockchain Technology which creates Hash value and validates it with each and every block of message before sending it to other clients",
-      technologies: ['Python', 'Node JS', 'Next JS', 'HTML & CSS', 'Cryptography', 'HTTP API\'s', 'Websockets']
+      technologies: ['Python', 'Node JS', 'Next JS', 'HTML & CSS', 'Cryptography', 'HTTP API\'s', 'Websockets'],
+      banner: ['main.png'].map(str => `/project_banner/block_chat/${str}`)
     },
     { 
       name: 'TD Problem Solver', icon: '/projects/td.png',
       links: [{name: 'Website', url: 'https://td.yuvaraja.tech'}],
       description: "This Project is based on Thermodynamics. So in this Project you can calculate all kinds of Problem related to Otto, Diesel, Brayton, Dual Cycles by inputing valid datas",
-      technologies: ['Node JS', 'Next JS', 'HTML & CSS', 'Thermodynamics Formulae']
+      technologies: ['Node JS', 'Next JS', 'HTML & CSS', 'Thermodynamics Formulae'],
+      banner: ['main.png', 'main2.png'].map(str => `/project_banner/td_problem_solver/${str}`)
     },
     {
       name: 'Private Chat Server',
       icon: null,
       links: [{name: 'Github', url: 'https://github.com/Yuvaraja28/Private-Chat-Server'}],
       description: "This is a Group Web-Chat Application Project based on Python Websockets for seamless Message Transfer and Flask to serve as Web Server",
-      technologies: ['Python', 'HTML & CSS', 'Websockets']
+      technologies: ['Python', 'HTML & CSS', 'Websockets'],
+      banner: ['main.png'].map(str => `/project_banner/private_chat_server/${str}`)
     },
     {
-      name: 'Music Player Website',
+      name: 'Diso Player Website',
       icon: null,
-      links: [{name: 'Github', url: 'https://github.com/Yuvaraja28/Music_Player_Website'}],
+      links: [{name: 'Github', url: 'https://github.com/Yuvaraja28/Disco_Player_Website'}],
       description: "A Spotify Inspired Project to Listen to local Songs from web dashboard in which we can play and control songs in the browser",
-      technologies: ['Javascript', 'HTML & CSS']
+      technologies: ['Javascript', 'HTML & CSS'],
+      banner: ['main.png'].map(str => `/project_banner/disco_player/${str}`)
     },
     {
       name: 'Student Connect',
       icon: null,
       links: [{name: 'Github', url: 'https://github.com/Yuvaraja28/MVIT_Student_Connect_NextJS'}],
       description: "This Project is aimed to connect College Management and Students, Where students can login and get their College related tasks that has been assigned to them from each staffs.",
-      technologies: ['Python', 'Node JS', 'Next JS', 'HTML & CSS']
+      technologies: ['Python', 'Node JS', 'Next JS', 'HTML & CSS'],
+      banner: ['main.png', 'main2.png', 'main3.png', 'main4.png'].map(str => `/project_banner/students_connect/${str}`)
     },
     {
       name: 'AI ChatBot GPT3',
       icon: null,
       links: [{name: 'Github', url: 'https://github.com/Yuvaraja28/AI_Chat_Bot_GPT3'}],
       description: "This Project is based on OpenAI's API and Python Flask, Get ChatGPT prompts in Colorful Website via their API",
-      technologies: ['Python', 'Javascript', 'HTTP API\'s', 'HTML & CSS']
+      technologies: ['Python', 'Javascript', 'HTTP API\'s', 'HTML & CSS'],
+      banner: ['main.png'].map(str => `/project_banner/ai_gpt_chat_web/${str}`)
     },
   ]
   const education = [
@@ -154,7 +163,7 @@ export default function Home() {
             <div className={styles.parallax_contents}>
               <article className={styles.aboutme_container}>
                 <div className={styles.aboutme_inner}>
-                  <Image className={styles.aboutme_banner} width={420} height={285} src={"/images/banner.gif"} alt='About Me' />
+                  <Image className={styles.aboutme_banner} width={400} height={285} src={"/images/banner.gif"} alt='About Me' style={{ height: 'inherit' }} />
                   <div className={styles.aboutme_inner_column}>
                     <span className={[styles.aboutme_heading, styles.green_glow, righteous.className].join(' ')}>
                       About me
@@ -182,72 +191,68 @@ export default function Home() {
                 </div>
               </article>
               <article className={[styles.education_container].join(' ')}>
-                <div className={styles.education_inner}>
-                  <span className={[styles.education_heading, styles.green_glow, righteous.className].join(' ')}>
-                    Education
-                  </span>
-                  <div className={styles.education_list_div_timeline}>
-                    <div className={styles.education_list_div}>
-                      {education.map(innerEducation =>
-                        <div key={innerEducation.duration} className={[styles.education_div_main, outfit.className].join(' ')}>
-                          <span className={styles.education_timeline}>
-                            {innerEducation.duration}
+                <span className={[styles.divider_heading, styles.green_glow, righteous.className].join(' ')}>
+                  Education
+                </span>
+                <div className={styles.education_list_div_timeline}>
+                  <div className={styles.education_list_div}>
+                    {education.map(innerEducation =>
+                      <div key={innerEducation.duration} className={[styles.education_div_main, outfit.className].join(' ')}>
+                        <span className={styles.education_timeline}>
+                          {innerEducation.duration}
+                        </span>
+                        <div key={innerEducation.name} className={[styles.education_div].join(' ')}>
+                          <span className={[styles.education_name, outfit.className].join(' ')}>
+                            {innerEducation.course} 
                           </span>
-                          <div key={innerEducation.name} className={[styles.education_div].join(' ')}>
-                            <span className={[styles.education_name, outfit.className].join(' ')}>
-                              {innerEducation.course} 
+                          <div className={styles.education_description_div}>
+                            <span style={{ opacity: 0.8 }} className={[styles.education_description, lexend.className].join(' ')}>
+                              {innerEducation.name} - {innerEducation.location}
                             </span>
-                            <div className={styles.education_description_div}>
-                              <span style={{ opacity: 0.8 }} className={[styles.education_description, lexend.className].join(' ')}>
-                                {innerEducation.name} - {innerEducation.location}
-                              </span>
-                              <span className={[styles.education_description, lexend.className].join(' ')}>
-                                {innerEducation.mark}
-                              </span>
-                            </div>
+                            <span className={[styles.education_description, lexend.className].join(' ')}>
+                              {innerEducation.mark}
+                            </span>
                           </div>
                         </div>
-                      )}
-                    </div>
+                      </div>
+                    )}
                   </div>
                 </div>
               </article>
               <article className={styles.projects_container}>
-                <div className={styles.projects_inner}>
-                  <span className={[styles.projects_heading, styles.green_glow, righteous.className].join(' ')}>
-                    Projects
-                  </span>
-                  <div className={styles.projects_list_div}>
-                    {projects.map(innerProject =>
-                      <div key={innerProject.name} className={styles.project_div}>
-                        {(innerProject?.banner == undefined) ? "" :
-                          <Image className={styles.project_image} alt='project' src={'/images/banner.gif'} width={128} height={168} />
-                        }
-                        <div className={styles.project_details_div}>
-                          <div className={styles.project_name_icon_div}>
-                            {innerProject.icon == null ? "" : <Image className={styles.project_icon} alt='project' src={innerProject.icon} width={38} height={38} />}
-                            <span className={[styles.project_name, outfit.className].join(' ')}>{innerProject.name}</span>
-                          </div>
-                          <span className={[styles.project_description, lexend.className].join(' ')}>
-                            {innerProject.description}
-                          </span>
-                          <span className={[styles.project_technologies, outfit.className].join(' ')}>
-                            {innerProject.technologies.join(', ')}
-                          </span>
-                          <div className={styles.project_link_div}>
-                            {innerProject.links.map(link =>
-                              <Link key={link.url} className={styles.project_link_icon} target='_blank' href={link.url}>
-                                {link.url.startsWith("https://github.com") ? <FaGithub /> : (link.url.startsWith("https://pterodactylmarket") || link.url.startsWith("https://builtbybit")) ? <TbBrandCashapp />  : <BiLink />}
-                                <span className={['project_link_name', outfit.className].join(' ')}>
-                                  {link.name}
-                                </span>
-                              </Link>
-                            )}
-                          </div>
-                        </div>                      
-                      </div>
-                    )}
-                  </div>
+                <span className={[styles.divider_heading, styles.green_glow, righteous.className].join(' ')}>
+                  Projects
+                </span>
+                <div className={styles.projects_list_div}>
+                  {projects.map(innerProject =>
+                    <div key={innerProject.name} className={styles.project_div}>
+                      {(innerProject?.banner == undefined) ? "" :
+                        <Image className={styles.project_image} alt='project' src={innerProject.banner[0]} width={512} height={168} />
+                      }
+                      <div className={styles.project_details_div}>
+                        <div className={styles.project_name_icon_div}>
+                          {innerProject.icon == null ? "" : <Image className={styles.project_icon} alt='project' src={innerProject.icon} width={38} height={38} />}
+                          <span className={[styles.project_name, outfit.className].join(' ')}>{innerProject.name}</span>
+                        </div>
+                        <span className={[styles.project_description, lexend.className].join(' ')}>
+                          {innerProject.description}
+                        </span>
+                        <span className={[styles.project_technologies, outfit.className].join(' ')}>
+                          {innerProject.technologies.join(', ')}
+                        </span>
+                        <div className={styles.project_link_div}>
+                          {innerProject.links.map(link =>
+                            <Link key={link.url} className={styles.project_link_icon} target='_blank' href={link.url}>
+                              {link.url.startsWith("https://github.com") ? <FaGithub /> : (link.url.includes("sourcexchange") || link.url.includes("pterodactylmarket") || link.url.includes("builtbybit")) ? <TbBrandCashapp />  : <BiLink />}
+                              <span className={['project_link_name', outfit.className].join(' ')}>
+                                {link.name}
+                              </span>
+                            </Link>
+                          )}
+                        </div>
+                      </div>                      
+                    </div>
+                  )}
                 </div>
               </article>
             </div>
