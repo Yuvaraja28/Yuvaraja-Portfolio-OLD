@@ -704,6 +704,7 @@
 
 .events_image {
   height: 100%;
+  width: 15em;
   border-radius: 15px;
   object-fit: cover;
   transform: scale(1.0);
@@ -713,7 +714,6 @@
 }
 
 .events_image_box {
-  margin: 5px;
   display: inline-block;
   color: white;
   position: relative;

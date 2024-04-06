@@ -338,7 +338,7 @@ export default function Home() {
                     Competitons & Events
                   </span>
                   <div className={[styles.events_gallery, styles.events_inner].join(' ')}>
-                    <div className={styles.events_gallery} style={{ transform: 'translateX(15px)' }}>
+                    <div className={styles.events_gallery} style={{ transform: 'translateX(15px)', gap: '10px' }}>
                       {event_images.map(events =>
                         <div className={styles.events_image_box} key={events.image}>
                           <img src={`/${events.image}`} loading='lazy' className={styles.events_image} />
