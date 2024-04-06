@@ -338,15 +338,15 @@ export default function Home() {
                     Competitons & Events
                   </span>
                   <div className={[styles.events_gallery, styles.events_inner].join(' ')}>
-                    <div className={styles.events_gallery} style={{ transform: 'translateX(15px)', gap: '10px' }}>
+                    <div className={styles.events_gallery} style={{ transform: 'translateX(15px)', paddingBottom: '8px', gap: '10px' }}>
                       {event_images.map(events =>
                         <div className={styles.events_image_box} key={events.image}>
                           <img src={`/${events.image}`} loading='lazy' className={styles.events_image} />
-                          <div class={[styles.events_transparent_box, outfit.className].join(' ')}>
-                            <div class={styles.events_caption}>
+                          <div className={[styles.events_transparent_box, outfit.className].join(' ')}>
+                            <div className={styles.events_caption}>
                               <span style={{ fontSize: 17, fontWeight: 600 }}>{events.name}</span>
                               <span style={{ fontSize: 14 }}>{events.place}, {events.date}</span>
-                              <span class={styles.events_opacity_low} style={{ fontSize: 15, fontWeight: 500 }}>
+                              <span className={styles.events_opacity_low} style={{ fontSize: 15, fontWeight: 500 }}>
                                 {events.description}
                               </span>
                             </div>
