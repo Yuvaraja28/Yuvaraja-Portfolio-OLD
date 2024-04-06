@@ -8,6 +8,7 @@ import { Josefin_Sans, Lexend, Righteous, Outfit } from 'next/font/google'
 import { BiLink } from 'react-icons/bi'
 import { TbBrandCashapp } from "react-icons/tb";
 import { MdMail } from 'react-icons/md'
+import { FaXTwitter } from "react-icons/fa6";
 import { FaGithub, FaLinkedin, FaPaypal, FaDiscord, FaInstagram } from 'react-icons/fa'
 
 const lexend = Lexend({ weight: ['300', '400', '500', '600'], subsets: ['latin'] });
@@ -22,12 +23,13 @@ export default function Home() {
     {name: 'Discord', icon: <FaDiscord />, link: "https://discord.com/users/759050921413312532", nav: true},
     {name: 'Paypal', icon: <FaPaypal />, link: "https://www.paypal.com/paypalme/YuvarajaMurali", nav: false},
     {name: 'Instagram', icon: <FaInstagram />, link: "https://www.instagram.com/yuvaraja_28/", nav: false},
+    {name: 'Twitter', icon: <FaXTwitter />, link: "https://twitter.com/yuvaraja_28", nav: false},
     {name: 'Email', icon: <MdMail />, link: "mailto:yuv.the.dev@gmail.com", nav: false}
   ]
   const projects = [
     { 
       name: 'Devactyl Bot', icon: '/projects/devactyl.png',
-      links: [{name: 'BuiltbyBit', url: 'https://builtbybit.com/resources/devactyl-bot.29488/'}, {name: 'SourceXchange', url: 'https://www.sourcexchange.net/products/devactyl-bot'}, {name: 'Ptero Market', url: 'https://pterodactylmarket.com/resource/619'}],
+      links: [{name: 'BuiltbyBit', url: 'https://builtbybit.com/resources/devactyl-bot.29488/'}, {name: 'SourceXchange', url: 'https://www.sourcexchange.net/products/devactyl-bot'}],
       description: "This is my commercial Project, Devactyl Bot lets you control all your Pterodactyl Panel Servers right from Discord in a Beautiful UI, Pterodactyl is a Cloud Server Management Software",
       technologies: ['Python', 'Cryptography', 'HTTP API\'s', 'Websockets', 'Discord'],
       banner: ['main.png', 'main2.png'].map(str => `/project_banner/devactyl/${str}`)
@@ -116,16 +118,127 @@ export default function Home() {
       location: 'Pondicherry',
     },
   ]
+  const event_images = [
+    {
+      name: 'SCIMIT`23',
+      place: 'MVIT Pondicherry',
+      date: 'February 2023',
+      image: 'events/certificate_1.png',
+      description: 'Participated in National Science Project EXPO held in Manakula Vinayagar Institute of Technology College'
+    },
+    {
+      name: 'Réjour`23',
+      place: 'Puducherry Technological University',
+      date: 'March 2023',
+      image: 'events/certificate_2.png',
+      description: 'Participated and won 🥈 II Place in Clash of Code'
+    },
+    {
+      name: 'MITILENCE',
+      place: 'MVIT Pondicherry',
+      date: 'March 2023',
+      image: 'events/certificate_4.png',
+      description: 'Participated and won 🥈 II Place in Website Hacking'
+    },
+    {
+      name: 'MITILENCE',
+      place: 'MVIT Pondicherry',
+      date: 'March 2023',
+      image: 'events/certificate_5.png',
+      description: 'Participated and won 🥉 III Place in AI CHAT BOT'
+    },
+    {
+      name: 'App Development',
+      place: 'MVIT Pondicherry',
+      date: 'April 2023',
+      image: 'events/certificate_6.png',
+      description: 'Participated in Design and Innovation Competition held in Manakula Vinayagar Institute of Technology College'
+    },
+    {
+      name: 'TEXUS',
+      place: 'SRM Ramapuram',
+      date: 'April 2023',
+      image: 'events/certificate_7.png',
+      description: 'Participated in Coder\'s Call Technical Event'
+    },
+    {
+      name: 'TEXUS',
+      place: 'SRM Ramapuram',
+      date: 'April 2023',
+      image: 'events/certificate_8.png',
+      description: 'Participated in Tech-It-Out Challenge'
+    },
+    {
+      name: 'TECHNOVISTA',
+      place: 'Sri Eshwar College of Engineering Coimbatore',
+      date: 'September 2023',
+      image: 'events/certificate_9.png',
+      description: 'Participated and won 🥉 III Place in Code Clash Technical Event'
+    },
+    {
+      name: 'GENESIS`23',
+      place: 'Puducherry Technological University',
+      date: 'October 2023',
+      image: 'events/certificate_10.png',
+      description: 'Participated and won 🥇 I Place in Programming Dating Technical Event'
+    },
+    {
+      name: 'ICON 2K23',
+      place: 'Puducherry Technological University',
+      date: 'October 2023',
+      image: 'events/certificate_12.png',
+      description: 'Participated and won 🥈 II Place in Debugging Technical Event'
+    },
+    {
+      name: 'TECHNOVATION 2K23',
+      place: 'MEC Mailam',
+      date: 'October 2023',
+      image: 'events/certificate_14.png',
+      description: 'Participated and won 🥉 III Place in CODEATHON Technical Event'
+    },
+    {
+      name: 'TECHNOVATION 2K23',
+      place: 'MEC Mailam',
+      date: 'October 2023',
+      image: 'events/certificate_15.png',
+      description: 'Participated and won 🥇 First Place in National Level Innovative Technical Fest (Project Competition) held in Mailam Engineering College'
+    },
+    {
+      name: 'AATRAL 2K24',
+      place: 'Vellore',
+      date: 'February 2024',
+      image: 'events/certificate_16.png',
+      description: 'Participated and won 🥇 First Place in National Level Technical Symposium (Project Expo) held in Thanthai Periyar Government Institute of Technology'
+    },
+    {
+      name: 'SCIMIT`24',
+      place: 'MVIT Pondicherry',
+      date: 'February 2024',
+      image: 'events/certificate_17.png',
+      description: 'Participated and won 🏆 Consolation Prize in National Science Project EXPO held in Manakula Vinayagar Institute of Technology College'
+    },
+    {
+      name: 'Réjour`24',
+      place: 'Puducherry Technological University',
+      date: 'March 2024',
+      image: 'events/certificate_18.png',
+      description: 'Participated and won 🥇 I Place in Clash of Codes Technical Event'
+    },
+  ]
+
   const divRef = useRef(null)
+  const audioRef = useRef(null)
   const [foreLoading, setForeLoading] = useState(true);
   const [backLoading, setBackLoading] = useState(true);
+
   useEffect(() => {
     if (foreLoading && backLoading) {
       divRef.current.style.display = 'flex'
-    }    
+    }
   }, [foreLoading, backLoading])
+
   return (
-    <main>
+    <main onScrollCapture={() => {if (audioRef.current != null) audioRef.current.play().catch(() => {})}}>
       <div style={{ display: (foreLoading || backLoading) ? 'flex' : 'none' }} className={styles.centre_div}>
         <OrbitLoader />
       </div>
@@ -190,72 +303,100 @@ export default function Home() {
                   </div>
                 </div>
               </article>
-              <article className={[styles.education_container].join(' ')}>
-                <span className={[styles.divider_heading, styles.green_glow, righteous.className].join(' ')}>
-                  Education
-                </span>
-                <div className={styles.education_list_div_timeline}>
-                  <div className={styles.education_list_div}>
-                    {education.map(innerEducation =>
-                      <div key={innerEducation.duration} className={[styles.education_div_main, outfit.className].join(' ')}>
-                        <span className={styles.education_timeline}>
-                          {innerEducation.duration}
-                        </span>
-                        <div key={innerEducation.name} className={[styles.education_div].join(' ')}>
-                          <span className={[styles.education_name, outfit.className].join(' ')}>
-                            {innerEducation.course} 
+              <article className={styles.achivementsDiv}>
+                <div className={[styles.education_container].join(' ')}>
+                  <span className={[styles.divider_heading, styles.green_glow, righteous.className].join(' ')}>
+                    Education
+                  </span>
+                  <div className={styles.education_list_div_timeline}>
+                    <div className={styles.education_list_div}>
+                      {education.map(innerEducation =>
+                        <div key={innerEducation.duration} className={[styles.education_div_main, outfit.className].join(' ')}>
+                          <span className={styles.education_timeline}>
+                            {innerEducation.duration}
                           </span>
-                          <div className={styles.education_description_div}>
-                            <span style={{ opacity: 0.8 }} className={[styles.education_description, lexend.className].join(' ')}>
-                              {innerEducation.name} - {innerEducation.location}
+                          <div key={innerEducation.name} className={[styles.education_div].join(' ')}>
+                            <span className={[styles.education_name, outfit.className].join(' ')}>
+                              {innerEducation.course} 
                             </span>
-                            <span className={[styles.education_description, lexend.className].join(' ')}>
-                              {innerEducation.mark}
-                            </span>
+                            <div className={styles.education_description_div}>
+                              <span style={{ opacity: 0.8 }} className={[styles.education_description, lexend.className].join(' ')}>
+                                {innerEducation.name} - {innerEducation.location}
+                              </span>
+                              <span className={[styles.education_description, lexend.className].join(' ')}>
+                                {innerEducation.mark}
+                              </span>
+                            </div>
                           </div>
                         </div>
+                      )}
+                    </div>
+                  </div>
+                </div>
+                <div className={styles.projects_container}>
+                  <span className={[styles.divider_heading, styles.green_glow, righteous.className].join(' ')}>
+                    Competitons & Events
+                  </span>
+                  <div className={[styles.events_gallery, styles.events_inner].join(' ')}>
+                    <div className={styles.events_gallery} style={{ transform: 'translateX(15px)' }}>
+                      {event_images.map(events =>
+                        <div className={styles.events_image_box} key={events.image}>
+                          <img src={`/${events.image}`} loading='lazy' className={styles.events_image} />
+                          <div class={[styles.events_transparent_box, outfit.className].join(' ')}>
+                            <div class={styles.events_caption}>
+                              <span style={{ fontSize: 17, fontWeight: 600 }}>{events.name}</span>
+                              <span style={{ fontSize: 14 }}>{events.place}, {events.date}</span>
+                              <span class={styles.events_opacity_low} style={{ fontSize: 15, fontWeight: 500 }}>
+                                {events.description}
+                              </span>
+                            </div>
+                          </div>
+                        </div>                      
+                      )}
+                    </div>
+                  </div>
+                </div>
+              </article>
+              <article className={styles.aboutme_container}>
+                <div className={styles.projects_container}>
+                  <span className={[styles.divider_heading, styles.green_glow, righteous.className].join(' ')}>
+                    Projects
+                  </span>
+                  <div className={styles.projects_list_div}>
+                    {projects.map((innerProject, projectIndex) =>
+                      <div key={projectIndex} className={styles.project_div}>
+                        {(innerProject?.banner == undefined) ? "" :
+                          <Image className={styles.project_image} alt='project' src={innerProject.banner[0]} width={512} height={198} />
+                        }
+                        <div className={styles.project_details_div}>
+                          <div className={styles.project_name_icon_div}>
+                            {innerProject.icon == null ? "" : <Image className={styles.project_icon} alt='project' src={innerProject.icon} width={38} height={38} />}
+                            <span className={[styles.project_name, outfit.className].join(' ')}>{innerProject.name}</span>
+                          </div>
+                          <span className={[styles.project_description, lexend.className].join(' ')}>
+                            {innerProject.description}
+                          </span>
+                          <span className={[styles.project_technologies, outfit.className].join(' ')}>
+                            {innerProject.technologies.join(', ')}
+                          </span>
+                          <div className={styles.project_link_div}>
+                            {innerProject.links.map(link =>
+                              <Link key={link.url} className={styles.project_link_icon} target='_blank' href={link.url}>
+                                {link.url.startsWith("https://github.com") ? <FaGithub /> : (link.url.includes("sourcexchange") || link.url.includes("pterodactylmarket") || link.url.includes("builtbybit")) ? <TbBrandCashapp />  : <BiLink />}
+                                <span className={['project_link_name', outfit.className].join(' ')}>
+                                  {link.name}
+                                </span>
+                              </Link>
+                            )}
+                          </div>
+                        </div>                      
                       </div>
                     )}
                   </div>
                 </div>
               </article>
-              <article className={styles.projects_container}>
-                <span className={[styles.divider_heading, styles.green_glow, righteous.className].join(' ')}>
-                  Projects
-                </span>
-                <div className={styles.projects_list_div}>
-                  {projects.map(innerProject =>
-                    <div key={innerProject.name} className={styles.project_div}>
-                      {(innerProject?.banner == undefined) ? "" :
-                        <Image className={styles.project_image} alt='project' src={innerProject.banner[0]} width={512} height={168} />
-                      }
-                      <div className={styles.project_details_div}>
-                        <div className={styles.project_name_icon_div}>
-                          {innerProject.icon == null ? "" : <Image className={styles.project_icon} alt='project' src={innerProject.icon} width={38} height={38} />}
-                          <span className={[styles.project_name, outfit.className].join(' ')}>{innerProject.name}</span>
-                        </div>
-                        <span className={[styles.project_description, lexend.className].join(' ')}>
-                          {innerProject.description}
-                        </span>
-                        <span className={[styles.project_technologies, outfit.className].join(' ')}>
-                          {innerProject.technologies.join(', ')}
-                        </span>
-                        <div className={styles.project_link_div}>
-                          {innerProject.links.map(link =>
-                            <Link key={link.url} className={styles.project_link_icon} target='_blank' href={link.url}>
-                              {link.url.startsWith("https://github.com") ? <FaGithub /> : (link.url.includes("sourcexchange") || link.url.includes("pterodactylmarket") || link.url.includes("builtbybit")) ? <TbBrandCashapp />  : <BiLink />}
-                              <span className={['project_link_name', outfit.className].join(' ')}>
-                                {link.name}
-                              </span>
-                            </Link>
-                          )}
-                        </div>
-                      </div>                      
-                    </div>
-                  )}
-                </div>
-              </article>
             </div>
+            <audio style={{ display: 'none' }} autoPlay loop ref={audioRef} src="/sounds/backsound.mp3" />
             <footer className={outfit.className}>
               © {new Date().getFullYear()} • Made with 💗 by Yuvaraja
             </footer>
