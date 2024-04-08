@@ -702,9 +702,13 @@
   scroll-behavior: smooth;
   scroll-snap-type: x mandatory;
   overflow-y: hidden;
+  padding-bottom: 8px;
 }
 .events_gallery::-webkit-scrollbar {
-  height: 4px;
+  height: 8px;
+}
+.events_gallery::-webkit-scrollbar-thumb {
+  border-radius: 15px;
 }
 
 .events_image {

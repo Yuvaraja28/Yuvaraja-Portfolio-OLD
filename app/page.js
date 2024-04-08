@@ -228,6 +228,7 @@ export default function Home() {
 
   const divRef = useRef(null)
   const audioRef = useRef(null)
+  const [isPlayed, setisPlayed] = useState(false);
   const [foreLoading, setForeLoading] = useState(true);
   const [backLoading, setBackLoading] = useState(true);
 
@@ -238,7 +239,7 @@ export default function Home() {
   }, [foreLoading, backLoading])
 
   return (
-    <main onScrollCapture={() => {if (audioRef.current != null) audioRef.current.play().catch(() => {})}}>
+    <main onScrollCapture={() => {if ((audioRef.current != null) && (!isPlayed)) {audioRef.current.play().catch(() => {}); setisPlayed(true)}}}>
       <div style={{ display: (foreLoading || backLoading) ? 'flex' : 'none' }} className={styles.centre_div}>
         <OrbitLoader />
       </div>
