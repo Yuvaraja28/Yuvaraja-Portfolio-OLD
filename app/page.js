@@ -239,7 +239,7 @@ export default function Home() {
   }, [foreLoading, backLoading])
 
   return (
-    <main onScrollCapture={() => {if ((audioRef.current != null) && (!isPlayed)) {audioRef.current.play().catch(() => {}); setisPlayed(true)}}}>
+    <main onScrollCapture={() => {if ((audioRef.current != null) && (!isPlayed)) {audioRef.current.play().catch(() => { setisPlayed(false) }); setisPlayed(true)}}}>
       <div style={{ display: (foreLoading || backLoading) ? 'flex' : 'none' }} className={styles.centre_div}>
         <OrbitLoader />
       </div>
