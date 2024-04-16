@@ -3,6 +3,7 @@ const aboutmeSocialDiv =  document.getElementById('aboutmeSocialDiv')
 const educationListDiv = document.getElementById('educationListDiv')
 const eventsGallery = document.getElementById('eventsGallery')
 const projectsListDiv =  document.getElementById('projectsListDiv')
+const techStackDiv = document.getElementById('techStackDiv')
 
 button_links.forEach(button => {
   const aboutme_social_button = document.createElement('a')
@@ -17,6 +18,18 @@ button_links.forEach(button => {
   aboutme_social_button.append(Icon)
   aboutme_social_button.append(buttonName)
   aboutmeSocialDiv.appendChild(aboutme_social_button)
+})
+
+tech_stack.forEach(tech => {
+  const tech_stack_button = document.createElement('span')
+  tech_stack_button.className = 'tech_stack_button'
+  const img = document.createElement('img')
+  img.setAttribute('width', '40')
+  img.setAttribute('src', tech.src)
+  img.setAttribute('title', tech.title)
+  img.setAttribute('alt', tech.title)
+  tech_stack_button.append(img)
+  techStackDiv.appendChild(tech_stack_button)
 })
 
 education.forEach(innerEducation => {
@@ -52,7 +65,7 @@ education.forEach(innerEducation => {
   educationListDiv.appendChild(education_div_main)
 })
 
-event_images.forEach(events => {
+all_events.reverse().forEach(events => {
   const events_image_box = document.createElement('div')
   events_image_box.className = 'events_image_box'
 

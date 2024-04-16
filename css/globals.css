@@ -39,3 +39,26 @@ footer {
 .fa-solid, .fa-brands {
   font-size: 16px;
 }
+
+.lexend {
+  font-family: "Lexend", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+.righteous {
+  font-family: "Righteous", sans-serif;
+  font-style: normal;
+}
+
+.josefin_sans {
+  font-family: "Josefin Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+.outfit {
+  font-family: "Outfit", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}

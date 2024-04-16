@@ -99,7 +99,7 @@ const education = [
     location: 'Pondicherry',
   },
 ]
-const event_images = [
+const all_events = [
   {
     name: 'SCIMIT`23',
     place: 'MVIT Pondicherry',
@@ -204,5 +204,87 @@ const event_images = [
     date: 'March 2024',
     image: 'events/certificate_18',
     description: 'Participated and won 🥇 I Place in Clash of Codes Technical Event'
+  },
+]
+const tech_stack = [
+  {
+    title: 'React',
+    src: "https://user-images.githubusercontent.com/25181517/183897015-94a058a6-b86e-4e42-a37f-bf92061753e5.png"
+  },
+  {
+    title: 'Next.js',
+    src: "https://github.com/marwin1991/profile-technology-icons/assets/136815194/5f8c622c-c217-4649-b0a9-7e0ee24bd704"
+  },
+  {
+    title: 'Django',
+    src: "https://github.com/marwin1991/profile-technology-icons/assets/62091613/9bf5650b-e534-4eae-8a26-8379d076f3b4"
+  },
+  {
+    title: 'Flask',
+    src: "https://user-images.githubusercontent.com/25181517/183423775-2276e25d-d43d-4e58-890b-edbc88e915f7.png"
+  },
+  {
+    title: 'Websocket',
+    src: "https://user-images.githubusercontent.com/25181517/187070862-03888f18-2e63-4332-95fb-3ba4f2708e59.png"
+  },
+  {
+    title: 'MongoDB',
+    src: "https://user-images.githubusercontent.com/25181517/182884177-d48a8579-2cd0-447a-b9a6-ffc7cb02560e.png"
+  },
+  {
+    title: 'Redis',
+    src: "https://user-images.githubusercontent.com/25181517/182884894-d3fa6ee0-f2b4-4960-9961-64740f533f2a.png"
+  },
+  {
+    title: 'MySQL',
+    src: "https://user-images.githubusercontent.com/25181517/183896128-ec99105a-ec1a-4d85-b08b-1aa1620b2046.png"
+  },
+  {
+    title: 'Python',
+    src: "https://user-images.githubusercontent.com/25181517/183423507-c056a6f9-1ba8-4312-a350-19bcbc5a8697.png"
+  },
+  {
+    title: 'Node.js',
+    src: "https://user-images.githubusercontent.com/25181517/183568594-85e280a7-0d7e-4d1a-9028-c8c2209e073c.png"
+  },
+  {
+    title: 'HTML',
+    src: "https://user-images.githubusercontent.com/25181517/192158954-f88b5814-d510-4564-b285-dff7d6400dad.png"
+  },
+  {
+    title: 'CSS',
+    src: "https://user-images.githubusercontent.com/25181517/183898674-75a4a1b1-f960-4ea9-abcb-637170a00a75.png"
+  },
+  {
+    title: 'C',
+    src: "https://user-images.githubusercontent.com/25181517/192106070-46255bcf-65e6-4c6b-a296-bf8d0d8fb2a7.png"
+  },
+  {
+    title: 'Dart',
+    src: "https://user-images.githubusercontent.com/25181517/186150304-1568ffdf-4c62-4bdc-9cf1-8d8efcea7c5b.png"
+  },
+  {
+    title: 'Selenium',
+    src: "https://user-images.githubusercontent.com/25181517/184103699-d1b83c07-2d83-4d99-9a1e-83bd89e08117.png"
+  },
+  {
+    title: 'Go',
+    src: "https://user-images.githubusercontent.com/25181517/192149581-88194d20-1a37-4be8-8801-5dc0017ffbbe.png"
+  },
+  {
+    title: 'Git',
+    src: "https://user-images.githubusercontent.com/25181517/192108372-f71d70ac-7ae6-4c0d-8395-51d8870c2ef0.png"
+  },
+  {
+    title: 'Postman',
+    src: "https://user-images.githubusercontent.com/25181517/192109061-e138ca71-337c-4019-8d42-4792fdaa7128.png"
+  },
+  {
+    title: 'Visual Studio Code',
+    src: "https://user-images.githubusercontent.com/25181517/192108891-d86b6220-e232-423a-bf5f-90903e6887c3.png"
+  },
+  {
+    title: 'Figma',
+    src: "https://user-images.githubusercontent.com/25181517/189715289-df3ee512-6eca-463f-a0f4-c10d94a06b2f.png"
   },
 ]
