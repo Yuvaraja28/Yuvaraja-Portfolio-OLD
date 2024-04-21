@@ -18,6 +18,7 @@
   background-color: rgb(97 117 117);
   box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
   animation: DragBottom 650ms ease-out;
+  will-change: transform;
 
   @media screen and (max-height: 350px) {
     visibility: hidden;
@@ -96,6 +97,7 @@
   flex-direction: column;
   animation: PopIn 1s ease-out;
   overflow: hidden;
+  will-change: transform;
 }
 
 .articles_div {
@@ -162,15 +164,18 @@
   justify-content: center;
   transform-style: preserve-3d;
   z-index: -1;
+  will-change: transform;
 }
 
 .paralax_img_fore {
   filter: brightness(0.9);
   transform: translateZ(-5px) scale(1.5) translateY(-4px);
+  will-change: transform;
 }
 
 .paralax_img_back {
   transform: translateZ(-25px) scale(3.5) translateX(-2px);
+  will-change: transform;
 }
 
 .paralax_img_fore, .paralax_img_back {
@@ -523,6 +528,7 @@
   -webkit-tap-highlight-color: transparent;
   transition: background 0.2s ease-in-out, border 0.2s ease-in-out, transform 0.2s ease-in-out;
   animation: FadePopIn 1.5s ease-in-out;
+  will-change: opacity, scroll-snap;
 
   @media screen and (max-width: 1180px) {
     min-height: 100%;
@@ -564,6 +570,7 @@
   padding-right: 8px;
   gap: 12.5px;
   scroll-snap-type: y mandatory;
+  will-change: scroll-snap;
 
   @media screen and (max-width: 1180px) {
     padding-right: 0;
@@ -656,6 +663,7 @@
   padding-right: 8px;
   width: 100%;
   gap: 10px;
+  will-change: scroll-snap;
 }
 .events_gallery::-webkit-scrollbar {
   height: 8px;
@@ -673,6 +681,7 @@
   border-radius: 6px;
   transition: transform 0.4s ease;
   scroll-snap-align: end;
+  will-change: transform, scroll-snap;
 }
 
 .events_image_box {
@@ -691,6 +700,7 @@
   flex-direction: column;
   position: absolute;
   gap: 3px;
+  will-change: transform, opacity;
   transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
@@ -770,6 +780,7 @@
   background: rgba(97, 117, 117, 50%);
   box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
   transition: background 0.2s linear, border 0.2s linear, transform 0.4s ease-in-out;
+  will-change: transform;
 }
 
 .tech_stack_button:hover {
